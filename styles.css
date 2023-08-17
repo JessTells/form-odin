@@ -1,0 +1,9 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+}
+
+.left {
+    background-image: url("anna-kovalova.jpg");
+}
