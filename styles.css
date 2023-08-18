@@ -1,9 +1,28 @@
+:root {
+    --right-padding: 20px;
+}
+
 body {
     height: 100vh;
     margin: 0;
     display: flex;
+    
 }
 
 .left {
     background-image: url("anna-kovalova.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.right-header {
+    padding: var(--right-padding);
+}
+
+.container {
+    padding: var(--right-padding);;
+}
+
+.right-footer {
+    padding: var(--right-padding);
 }
