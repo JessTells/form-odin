@@ -1,3 +1,60 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  
+  .element {
+    font-family: var(--system-ui);
+  }
+
 :root {
     --right-padding: 32px;
 }
@@ -20,8 +77,9 @@ body {
 .right {
     display: flex;
     flex-direction: column;
-    flex: 0 1 auto;
+    flex: 1;
     width: 60rem;
+    background: linear-gradient(white, rgb(208, 255, 208))
 }
 
 .right-header {
@@ -35,6 +93,7 @@ body {
     font-weight: 500;
     margin: 0px;
     padding: 0px;
+    color: black;
 }
 
 .right-header .prompt-2 {
@@ -44,11 +103,13 @@ body {
 
 .container {
     padding: var(--right-padding);
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 16px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 3px rgb(185, 185, 185);
+    
 }
 
 .info-row {
@@ -61,10 +122,27 @@ body {
     flex-direction: column;
 }
 
-input[type="text"] {
+label {
+    color: rgb(136, 136, 136)
+}
+
+.input-box{
     width: 25em;
+    background-color: white;
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 3px;
 }
 
 .right-footer {
     padding: var(--right-padding);
+}
+
+.submit-button {
+    padding: 18px;
+    width: 250px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(99, 136, 97);
+    color: white;
+    font-size: larger;
 }
