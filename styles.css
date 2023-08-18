@@ -1,5 +1,5 @@
 :root {
-    --right-padding: 20px;
+    --right-padding: 32px;
 }
 
 body {
@@ -11,16 +11,58 @@ body {
 
 .left {
     background-image: url("anna-kovalova.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    width: min(40rem, 600px);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+    width: 60rem;
 }
 
 .right-header {
     padding: var(--right-padding);
+    padding-left: 50px;
+    width: 90%;
+    font-size: 1.2em;
+}
+
+.right-header p {
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px;
+}
+
+.right-header .prompt-2 {
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .container {
-    padding: var(--right-padding);;
+    padding: var(--right-padding);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.info-row {
+    display: flex;
+    gap: 42px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    width: 25em;
 }
 
 .right-footer {
